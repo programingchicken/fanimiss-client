@@ -1,0 +1,375 @@
+
+.emailForm {
+  position: relative;
+  height: 85%;
+  width: 40vw;
+  left: 5vw;
+  display: block;
+
+}
+
+.iconImg {
+    transition: transform .4s ease-in-out;
+  }
+  .iconImg:hover {
+    transform: rotateY(360deg);
+  }
+
+
+  .hoverLink {
+    box-shadow: 
+    -4px 8px 8px 0px rgba(0,0,0,.5), 
+    -4px 6px 6px 0px rgba(0,0,0,.6), 
+    -4px 4px 4px 0px rgba(0,0,0,.7), 
+    -4px 2px 2px 0px rgba(0,0,0,.8), 
+    -4px 1px 1px 0px rgba(0,0,0,.9), 
+    -5px 13px 6px 0px rgb(0 0 0 / 15%);
+    transition: box-shadow transform .5s ease-in-out;
+  }
+
+
+  .hoverLink:hover {
+    box-shadow:     
+    -4px 8px 8px 0px rgba(0,0,0,.5), 
+    -4px 6px 6px 0px rgba(0,0,0,.6), 
+    -4px 4px 4px 0px rgba(0,0,0,.7), 
+    -4px 2px 2px 0px rgba(0,0,0,.8), 
+    -4px 1px 1px 0px rgba(0,0,0,.9), 
+    -12px 14px 6px 9px rgb(0 0 0 / 15%);
+  }
+
+
+
+  .sidenav {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sideBuy {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+  }
+  
+  body {
+    background-color: #3D3D3D;
+  }
+  
+  .nav {
+    padding: 8px 8px 8px 32px;
+    position: relative;
+    text-decoration: none;
+    font-size: 0px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav span:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav span {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sideBuy span {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sideBuy div.scroll {
+    border-bottom-left-radius: 10%;
+    border-top-left-radius: 10%;
+    background-color: #374e66;
+width:50%;
+    display: none;
+    transition: 0.3s;
+  }
+
+  .sideBuy div.buy {
+    border-bottom-right-radius: 10%;
+    border-top-right-radius: 10%;
+    background-color: #374e66;
+width:47%;
+    display: none;
+    height: 95%;
+    transition: 0.3s;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding: 8px 8px 8px 32px;
+  }
+  .sideBuy .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding: 8px 8px 8px 32px;
+  }
+
+
+
+  @keyframes flash {
+    0%, 100% {
+      text-shadow:
+          0 0 7px #f2ebeb,
+          0 0 10px #f2ebeb,
+          0 0 42px #5271ff,
+          0 0 82px #5271ff,
+          0 0 92px #5271ff;
+    }
+    50% {
+      text-shadow:
+      0 0 7px #f2ebeb,
+      0 0 10px #f2ebeb,
+      0 0 21px #f2ebeb,
+      0 0 42px #5271ff,
+      0 0 82px #5271ff,
+      0 0 92px #5271ff,
+      0 0 102px #5271ff;
+      }
+  }
+
+
+  .neonText {
+    color: #f2ebeb;
+    opacity: 80%;
+    animation: flash 2s infinite;
+    animation-direction: alternate;
+  }
+
+
+
+
+  .neonText:hover{
+    color: #4c6885;
+  }
+  
+  .spacer {
+    aspect-ratio: 1460/700;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+.layer1{
+  background-image: url('./layer1.svg');
+}
+
+.layer2{
+  background-image: url('./layer2.svg');
+}
+.layer3{
+  background-image: url('./layer3.svg');
+  position: relative;
+  margin-top: auto;
+}
+.sho {
+  box-shadow: 
+  -4px 8px 8px 0px rgba(0,0,0,.5), 
+  -4px 6px 6px 0px rgba(0,0,0,.6), 
+  -4px 4px 4px 0px rgba(0,0,0,.7), 
+  -4px 2px 2px 0px rgba(0,0,0,.8), 
+  -4px 1px 1px 0px rgba(0,0,0,.9), 
+  -5px 13px 6px 0px rgb(0 0 0 / 15%);
+  transition: box-shadow transform .5s ease-in-out;
+}
+
+
+details[open] summary {
+  margin-top: 185%;
+}
+
+div.scroll {
+  position: relative;
+  left: 2.7vw;
+  margin:4px, 4px;
+  padding:2vw;
+  width: 95%;
+  height: 95%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align:justify;
+}
+
+div.scroll::-webkit-scrollbar {
+  width: .9vw               /* width of the entire scrollbar */
+}
+div.scroll::-webkit-scrollbar-track {
+  background: rgb(35, 52, 72);        /* color of the tracking area */
+}
+div.scroll::-webkit-scrollbar-thumb {
+  background-color: rgb(121, 125, 153);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(35, 52, 72);  /* creates padding around scroll thumb */
+}
+
+.sideView {
+  height: 100vh;
+  width: 0vw;
+  position: relative;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+  .sideView a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sideView span:hover {
+    color: #f1f1f1;
+  }
+  
+  .sideView span {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sideView .closebtn {
+    position: relative;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding: 8px 8px 8px 32px;
+  }
+
+.inn {
+  background-color: white;
+  width: 65vw;
+  height: 160vh;
+}
+.cont {
+  position: relative;
+  background-color: rgb(55 78 102);
+  width: 70vw;
+  height: 170vh;
+  bottom: 15vw;
+}
+
+.titleName {
+  color: black;
+  font-size: 3em;
+}
+
+.titlePrice {
+color: black; 
+margin: 2.5vw;
+font-size: 2em;
+}
+
+.titles {
+  position: relative;
+   top: 10vw;
+   width: 40%;
+   height: 35%;
+   display: inline-grid;
+   z-index: 3;
+}
+
+.imgS {
+  position: relative;
+  left: 5vw;
+  width: 20vw;
+}
+.starS{
+ width: 100%;
+  position:relative;
+   bottom: 10vh;
+}
+@media only screen and (max-width: 1400px) and (min-width: 0px) {
+  .titles {
+    position: relative;
+     top: 10%;
+     width: 90%;
+     height: 15%;
+     left: 5vw;
+     display: inline-grid;
+     text-align:  left;
+  }
+  .starS{
+    width: 100%;
+     position:relative;
+      bottom: -5%;
+      height: 65vh;
+   }
+  .inn {
+    background-color: white;
+    width: 65vw;
+    height: 160vh;
+  }
+  .cont {
+    position: relative;
+    background-color: rgb(55 78 102);
+    width: 70vw;
+    height: 170vh;
+    bottom: 15vw;
+  }
+  
+  .titleName {
+    color: black;
+  }
+  
+  .titlePrice {
+
+  color: black;
+  }
+  .imgS {
+    position: relative;
+    left: 18vw;
+    width: 30vw;
+  }
+}
+@media only screen and (max-width: 500px) and (min-width: 0px) {
+  .titleName {
+    font-size: 2.5em;
+    color: black;
+  }
+  
+  .titlePrice {
+    font-size: 1.5em;
+  color: black;
+  }
+}
+

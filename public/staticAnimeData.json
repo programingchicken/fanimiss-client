@@ -1,0 +1,21 @@
+{
+    "cat":{
+        "post":
+        [
+            {
+                "name": "hello",
+                "img": "poop",
+                "stars": 4,
+                "price": 1,
+                "id": 1
+            },
+            {
+                "name": "poop",
+                "img": "poop",
+                "stars": 4,
+                "price": 1,
+                "id": 2
+            }
+        ]
+    }
+}
