@@ -141,7 +141,7 @@ width:47%;
 
 
 
-  @keyframes flash {
+  /* @keyframes flash {
     0%, 100% {
       text-shadow:
           0 0 7px #f2ebeb,
@@ -160,14 +160,14 @@ width:47%;
       0 0 92px #5271ff,
       0 0 102px #5271ff;
       }
-  }
+  } */
 
 
   .neonText {
     color: #5271ff;
-    opacity: 80%;
-    animation: flash 2s infinite;
-    animation-direction: alternate;
+    opacity: 100%;
+    /* animation: flash 2s infinite;
+    animation-direction: alternate; */
   }
 
 
