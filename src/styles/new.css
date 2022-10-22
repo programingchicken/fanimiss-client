@@ -141,26 +141,7 @@ width:47%;
 
 
 
-  @keyframes flash {
-    0%, 100% {
-      text-shadow:
-          0 0 7px #f2ebeb,
-          0 0 10px #f2ebeb,
-          0 0 42px #5271ff,
-          0 0 82px #5271ff,
-          0 0 92px #5271ff;
-    }
-    50% {
-      text-shadow:
-      0 0 7px #f2ebeb,
-      0 0 10px #f2ebeb,
-      0 0 21px #f2ebeb,
-      0 0 42px #5271ff,
-      0 0 82px #5271ff,
-      0 0 92px #5271ff,
-      0 0 102px #5271ff;
-      }
-  }
+  
 
 
   .neonText {
