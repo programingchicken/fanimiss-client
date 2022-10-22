@@ -141,33 +141,33 @@ width:47%;
 
 
 
-  /* @keyframes flash {
+  @keyframes flash {
     0%, 100% {
       text-shadow:
           0 0 7px #f2ebeb,
           0 0 10px #f2ebeb,
-          0 0 42px #5271ff,
-          0 0 82px #5271ff,
-          0 0 92px #5271ff;
+          0 0 42px #1f45f1,
+          0 0 82px #1f45f1,
+          0 0 92px #1f45f1;
     }
     50% {
       text-shadow:
       0 0 7px #f2ebeb,
       0 0 10px #f2ebeb,
       0 0 21px #f2ebeb,
-      0 0 42px #5271ff,
-      0 0 82px #5271ff,
-      0 0 92px #5271ff,
-      0 0 102px #5271ff;
+      0 0 42px #1f45f1,
+      0 0 82px #1f45f1,
+      0 0 92px #1f45f1,
+      0 0 102px #1f45f1;
       }
-  } */
+  }
 
 
   .neonText {
-    color: #5271ff;
+    color: #1f45f1;
     opacity: 100%;
-    /* animation: flash 2s infinite;
-    animation-direction: alternate; */
+    animation: flash 2s infinite;
+    animation-direction: alternate;
   }
 
 
