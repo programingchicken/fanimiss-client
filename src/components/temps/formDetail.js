@@ -15,23 +15,27 @@ switchs,
       } = props; 
       const [size, setSize] = useState(true)
       const [newSize, setNewSize] = useState(0)
-      const [fullArr, setFullArr] = useState([[...cat.onePiece], [...cat.naruto], [...cat.bleach]])
+      const [fullArr, setFullArr] = useState([[...cat.onePiece], [...cat.naruto], [...cat.bleach],[...cat.myHeroAcademia], [...cat.chainsawMan], [...cat.demonSlayer] ])
 
 
       useEffect(() => {
-        for (const obj of fullArr[0]) {
+        for (const arr of fullArr) {
+          for (const obj of arr) {
           if (id+newSize === obj.id) {
             handelReviews(size, obj.size, obj.price)
           }
         }
+      }
       },[])
   //submit
   function handleAddCart(event) {
-    for (const obj of fullArr[0]) {
+    for (const arr of fullArr) {
+      for (const obj of arr) {
       if (id+newSize === obj.id) {
-        addCart(obj.id,`${obj.size} ${obj.name}`, obj.name, obj.price );
+        addCart(obj.id,`${obj.name} ${obj.size}`, obj.name, obj.price );
       }
     }
+  }
 
   }
 
@@ -55,11 +59,13 @@ switchs,
       setNewSize(0)
       console.log(id + 0)
     } 
-    for (const obj of fullArr[0]) {
+    for (const arr of fullArr) {
+      for (const obj of arr) {
       if (id+newSize === obj.id) {
         handelReviews(size, obj.size, obj.price)
       }
     }
+  }
 
   }
 

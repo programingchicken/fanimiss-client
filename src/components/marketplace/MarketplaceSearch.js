@@ -37,7 +37,7 @@ export default class Marketplace extends Component {
     rows: 3,
     hashPass: "",
     errors: [],
-    fullArr: [[...cat.onePiece], [...cat.naruto], [...cat.bleach]],
+    fullArr: [[...cat.onePiece], [...cat.naruto], [...cat.bleach], [...cat.myHeroAcademia],[...cat.chainsawMan],[...cat.demonSlayer]],
   };
   
 

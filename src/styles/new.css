@@ -8,6 +8,13 @@
 
 }
 
+.arg2 {
+  display:inline;
+}
+.arg {
+  display:-webkit-inline-box;
+}
+
 .iconImg {
     transition: transform .4s ease-in-out;
   }
@@ -100,7 +107,6 @@
     text-decoration: none;
     font-size: 25px;
     color: #818181;
-    display: block;
     transition: 0.3s;
   }
   .sideBuy div.scroll {
@@ -165,6 +171,7 @@ width:47%;
 
   .neonText {
     color: #f2ebeb;
+    opacity: 80%;
     animation: flash 2s infinite;
     animation-direction: alternate;
   }

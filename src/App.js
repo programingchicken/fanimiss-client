@@ -11,7 +11,7 @@ import {
 // import TopRated from './components/Reviews/TopRated';
 import Marketplace from './components/marketplace/MarketplaceSearch';
 import MarketplaceItem from './components/marketplace/MarketPage';
-import PosterPage from './components/poster/PosterPage';
+import PosterPage from './components/poster/PosterPage1';
 import Poster from './components/poster/Poster';
 import BuyPage from './components/BuyPage';
 // import About from './components/about/AboutUs';

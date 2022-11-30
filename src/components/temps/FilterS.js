@@ -114,19 +114,18 @@ filter()
 <select id='filt' onInput={filterSearch} style={{color: '#f2ebeb',backgroundColor:'#797d99',border:'none', width: 'auto', position: 'relative'}} className="sho rounded-pill">
     <option value='0'>All Items</option>
     <option value='One Piece'>One Piece</option>
-    <option value="Dragonball">Dragonball</option>
     <option value="Naruto">Naruto</option>
     <option value="Bleach">Bleach</option>
-    <option value="Demon Slayer">Demon Slayer</option>
-    <option value="My Hero Academy">My Hero Academy</option>
-    <option value="One Punch Man">One Punch Man</option>
-    <option value="DeathNote">DeathNote</option>
+    <option value="DemonSlayer">Demon Slayer</option>
+    <option value="My Hero Academia">My Hero Academia</option>
+    <option value="Chainsaw Man">Chainsaw Man</option>
     <option value="9">Braclets</option>
     <option value="10">Key Chains</option>
     <option value="11">Necklace</option>
     <option value="12">Lanyard</option>
     <option value="13">Stickers</option>
     <option value="14">Plushies</option>
+    <option value="15">Cosplay</option>
 </select>
       </div>
       </div>

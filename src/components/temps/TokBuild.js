@@ -11,17 +11,17 @@ import { Link } from 'react-router-dom';
   for (const obj of arr) {
 
       results.push(
-        <a className="btn rounded-5 hoverLink tokDiv" href={`/posters/${obj.po}`} style={{backgroundColor: "rgb(255 255 255)"}}>
+        <a className="btn rounded-5 hoverLink tokDiv" href={`/posters/${obj.id}`} style={{backgroundColor: "rgb(255 255 255)"}}>
             <img
             className=""
             alt="merchandise"
             src={obj.img}
             style={{ height: "20.5vw", width: "18.5vw" }}
           />
-          <h3 className="price" >
+          <h3 className="price3" >
             {obj.price}
           </h3>
-          <h1 className=" nameTitle">
+          <h1 className=" nameTitle3">
             {obj.name}
           </h1>
           </a>

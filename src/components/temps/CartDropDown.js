@@ -30,7 +30,8 @@ const CartDropDown = (props) => {
   }
 
   function removeItem(event){
-        const e = event.target.parentNode.childNodes[2]
+        const e = event.target.parentNode.childNodes[1]
+        console.log(e)
         const arr = fullArr.filter((obj) => obj.name !== e.textContent )
     
          console.log(e)
@@ -70,11 +71,14 @@ const CartDropDown = (props) => {
           <img
             alt="merchandise"
             src={obj.img}
-            style={{ position:'relative',height: "9.5vw", width: "7.5vw", right: '17vw' }}
+            style={{ position:'relative',height: "9.5vw", width: "7.5vw", right: '16.5vw',top: '1vh' }}
           />
-          <h3 className="price">{obj.price}</h3>
           <h1 className=" nameTitle">{obj.name}</h1>
-          <button className="btn btn-outline-secondary rounded-circle" style={{width: "4.5vw", height: "4.5vw", position: 'relative', left:'12vw',bottom: '8vw',color: "#374e66", borderColor: "#374e66"}} onClick={removeItem}>X</button>
+          <div className="arg2">
+          <span className="price">{obj.price}</span>
+          <span className=" quan">{obj.quantity}</span>
+          </div>
+          <button className="btn btn-outline-secondary rounded-circle" style={{width: "4.5vw", height: "4.5vw", position: 'relative', left:'6vw',bottom: '8vw',color: "#374e66", borderColor: "#374e66"}} onClick={removeItem}>X</button>
         </span>
       )
   }
