@@ -171,7 +171,6 @@ width:47%;
 
   .neonText {
     color: #f2ebeb;
-    opacity: 80%;
     animation: flash 2s infinite;
     animation-direction: alternate;
   }
