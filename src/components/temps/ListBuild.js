@@ -12,10 +12,10 @@ const ListBuild = (props) => {
       results.push(
         <a className="btn rounded-5 hoverLink linkDiv" objid={obj.id} value={obj.val} value2={obj.val2} href={`/marketplace/${obj.id}`} style={{backgroundColor: "rgb(255 255 255)"}}>
             <img
-            className="rounded-3"
+            className="rounded-3 img2"
             alt="merchandise"
             src={obj.img}
-            style={{ height: "9.5vw", width: "7.5vw" }}
+
           />
           <h3 className="price2" >
             {obj.price}
@@ -34,7 +34,7 @@ console.log(fullArr)
   //the div and form of buttons
   return (
     <div className="scroll">
-{results}
+{results.sort(() => (Math.random() > .5) ? 1 : -1)}
   </div>
   );
 };

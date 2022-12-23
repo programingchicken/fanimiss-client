@@ -80,19 +80,20 @@ full: getData(),
           className="spacer layer3 d-grid justify-content-center align-items-center grid-wrap"
           style={{ margintop: "3em" }}
         >
+                                               <div style={{position: 'relative', right: '25vw'}}> 
+                <SideNav />
+                </div>
           <span
             className="sho rounded-pill"
             style={{
               width: "35vw",
-              backgroundColor: "#001220",
+              backgroundColor: "rgb(55 78 102)",
               position: "relative",
               right: ".8%",
               top: "-45.5%",
             }}
         >
-                                     <div style={{position: 'relative', right: '25vw'}}> 
-                <SideNav />
-                </div>
+
 
             <h1 style={styles.title}>FANIMISS</h1>
           </span>
@@ -156,7 +157,7 @@ full: getData(),
               }}
             >
 
-            <TokBuildPage fullArr={fullArr}/>
+            <TokBuildPage fullArr={fullArr.sort(() => (Math.random() > .5) ? 1 : -1)}/>
             
             </div>
           </div>

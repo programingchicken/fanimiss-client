@@ -12,10 +12,9 @@ import { Link } from 'react-router-dom';
       results.push(
         <a className="btn rounded-5 hoverLink linkDiv" value={obj.id} href={`/posters/${obj.id}`} style={{backgroundColor: "rgb(255 255 255)"}}>
             <img
-            className=""
+            className="rounded-3 img2"
             alt="merchandise"
             src={obj.img}
-            style={{ height: "9.5vw", width: "7.5vw" }}
           />
           <h3 className="price2" >
             {obj.price}
@@ -34,7 +33,7 @@ console.log(fullArr)
   //the div and form of buttons
   return (
     <div className="scroll">
-{results}
+{results.sort(() => (Math.random() > .5) ? 1 : -1)}
   </div>
   );
 };

@@ -130,7 +130,7 @@ const buttonBuild = (props) => {
             <FontAwesomeIcon
               icon={solid("arrow-left")}
               style={{
-                fontSize: '3vw',
+                fontSize: '3.5vh',
                 color: "rgb(242 235 235)",
               }}
             />

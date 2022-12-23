@@ -12,6 +12,7 @@ import {
 import Marketplace from './components/marketplace/MarketplaceSearch';
 import MarketplaceItem from './components/marketplace/MarketPage';
 import PosterPage from './components/poster/PosterPage1';
+import PosterPage2 from './components/poster/PosterPage2';
 import Poster from './components/poster/Poster';
 import BuyPage from './components/BuyPage';
 // import About from './components/about/AboutUs';
@@ -19,6 +20,7 @@ import PosterSmall from './components/poster/PosterSmall';
 
 import Public from './components/Public';
 import Menu from './components/Menu';
+import About from './components/About';
 import NotFound from './components/NotFound';
 // import UserSignUp from './components/user/UserSignUp';
 // import UserSignIn from './components/user/UserSignIn';
@@ -34,9 +36,11 @@ const MarketplaceWithContext = withContext(Marketplace);
 const MarketplaceItemWithContext = withContext(MarketplaceItem);
 const PosterWithContext = withContext(Poster);
 const PagePosterWithContext = withContext(PosterPage);
+const PagePoster2WithContext = withContext(PosterPage2);
 const BuyPageWithContext = withContext(BuyPage);
 const PosterSmallWithContext = withContext(PosterSmall);
 
+const AboutWithContext = withContext(About);
 // const ReviewsWithContext = withContext(Reviews);
 // const TopRatedWithContext = withContext(TopRated);
 // const MakeReviewsWithContext = withContext(MakeReviews);
@@ -66,10 +70,12 @@ localStorage.setItem("cart",JSON.stringify(cart));
 
         <Route exact path="/marketplace" component={MarketplaceWithContext} />
         <Route exact path="/marketplace/:id" component={MarketplaceItemWithContext} />
-        <Route exact path="/posters/small" component={PosterSmallWithContext} />
+        <Route exact path="/posters/1000" component={PosterSmallWithContext} />
+        <Route exact path="/posters/510" component={PagePoster2WithContext} />
         <Route exact path="/posters/:id" component={PagePosterWithContext} />
         <Route exact path="/posters" component={PosterWithContext} />
         <Route exact path="/buypage" component={BuyPageWithContext} />
+        <Route exact path="/about" component={AboutWithContext} />
          {/*
         <Route exact path="/reviews" component={ReviewsWithContext} />
         <Route exact path="/reviews/reviewcom" component={MakeReviewsWithContext} />

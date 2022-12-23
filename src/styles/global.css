@@ -230,3 +230,43 @@ width: 100%;
   width: 100%;
   margin-top: 5em;
  }
+
+ @media only screen and (max-width: 1000px) and (min-width: 0px) {
+ .tokDiv {
+  width: 90%;
+  text-decoration: none;
+  margin: 10px;
+  height: 32vw;
+  background-color: rgb(255 255 255);
+}
+ }
+
+ @media only screen and (max-width: 750px) and (min-width: 0px) {
+  .tokDiv {
+   width: 90%;
+   text-decoration: none;
+   margin: 10px;
+   height: 45vw;
+   background-color: rgb(255 255 255);
+ }
+ .next {
+  background-color: #797d99;
+  position: fixed;
+  left: 2.5vw;
+  bottom: 4%;
+  height: 2.5em;
+  width: 2.5em;
+  z-index: 4;
+}
+  }
+
+  @media only screen and (max-width: 450px) and (min-width: 0px) {
+    .tokDiv {
+     width: 90%;
+     text-decoration: none;
+     margin: 10px;
+     height: 65vw;
+     background-color: rgb(255 255 255);
+   }
+
+    }

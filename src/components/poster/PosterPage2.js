@@ -1,17 +1,16 @@
 import React, { Component } from "react";
-import { cat } from "../Data/staticMarkFavData.json";
+import { cat } from "../Data/staticMarkData.json";
 //got this from stack over flow Couldnt get text
 import ReactMarkdown from "react-markdown";
 import FormDetail from '../temps/formDetail';
 import FormDetail2 from '../temps/formDetail2';
-import FormDetail3 from '../temps/formDetail3';
-import FormDetail4 from '../temps/formDetail4';
+import FormDetailPoster2 from '../temps/formDetailPoster2';
 import StarDiv from '../temps/StarDiv';
 import CartDropDown from '../temps/CartDropDown';
 import {SideNav} from "../temps/SideNav";
 import ButtonBuild  from "../temps/buttonBuild";
 
-class MarketPlace extends Component {
+class PosterPage2 extends Component {
   //org state
   state = {
     imgs: "",
@@ -29,7 +28,7 @@ class MarketPlace extends Component {
     size:"",
     quantity: 1,
     errors: [],
-    full: [[...cat.onePiece], [...cat.naruto], [...cat.bleach],[...cat.myHeroAcademia],[...cat.chainsawMan],[...cat.demonSlayer]],
+    full: [[...cat.small],[...cat.tok]],
     cato: '',
     display: 1,
   };
@@ -134,8 +133,8 @@ handelSelects={this.handelSelects}
 price={itemName.price}
 addCart={this.addCart}
 handelReviews={this.handelReviews}
-/> : display === 3 ?
-<FormDetail3
+/> : 
+<FormDetailPoster2
 cato={cato}
 newSizeO={size}
 itemName={name}
@@ -146,20 +145,7 @@ handelSelects={this.handelSelects}
 price={itemName.price}
 addCart={this.addCart}
 handelReviews={this.handelReviews}
-/> :
-<FormDetail4
-switchs={switchs}
-cato={cato}
-newSizeO={size}
-itemName={name}
-style={styles.forms}
-errors={errors}
-id={id}
-price={itemName.price}
-addCart={this.addCart}
-handelReviews={this.handelReviews}
-/>  
-
+/> 
              }
 
                 </div>
@@ -177,7 +163,7 @@ handelReviews={this.handelReviews}
   //cancel to route
   back = () => {
 
-    this.props.history.push("/marketplace");
+    this.props.history.push("/posters");
   };
 
 
@@ -187,40 +173,6 @@ handelReviews={this.handelReviews}
   addCart = (id2, newName, newAName, price, imgC,newBName) => {
     const {display} = this.state
     // localStorage.removeItem('cart')
-    if (display === 4) {
-      const {name,stars,id,img,token,size} = this.state
-      const item = {name: `${newName}`, quantity: 1,stars:stars,price: price,id: id2,img,token}
-      const arr = [...JSON.parse(localStorage.getItem('cart'))]
-      const newarr = []
-      console.log(arr)
-  if (arr.length !== 0) {
-        for (let i = 0; i < arr.length; i++) {
-          if (arr[i].id === item.id) {
-            item.quantity += arr[i].quantity 
-            const newA = arr.filter((obj) => obj.id === item.id)
-            console.log(newA)
-            newarr.push(item,...newA)
-          }else if (arr.length === i ) {
-            newarr.push(item)
-          } else {
-            newarr.push(arr[i])
-          }
-        }
-      } else {
-  newarr.push(item)
-      }
-  
-      console.log(newarr)
-      // localStorage.setItem('cart',JSON.stringify([item,...JSON.parse(localStorage.getItem(('cart')|| []))]));
-  
-      localStorage.setItem('cart',JSON.stringify([...newarr.filter((obj) => obj.id !== item.id),item]));
-    
-  
-  
-      console.log(JSON.parse(localStorage.getItem('cart')))
-          this.props.history.push("/marketplace");
-    } 
-
     if (display === 1) {
       const {name,stars,id,img,token,size} = this.state
       const item = {name: `${newName}`, quantity: 1,stars:stars,price: price,id: id2,img,token}
@@ -252,7 +204,7 @@ handelReviews={this.handelReviews}
   
   
       console.log(JSON.parse(localStorage.getItem('cart')))
-          this.props.history.push("/marketplace");
+          this.props.history.push("/posters");
     } else if (display === 2) {
       const {name,stars,id,img,token, quantity,size} = this.state
 let item = {name: `${newName}`,stars:stars,price: price,id: id2,img,token, quantity, nameArr: [{nameC: newAName, quantityC: 1 } ]}
@@ -331,7 +283,7 @@ console.log(newarr)
 // localStorage.setItem('cart',JSON.stringify([item,...JSON.parse(localStorage.getItem(('cart')|| []))]));
 
 localStorage.setItem('cart',JSON.stringify([...newarr.filter((obj) => obj.id !== item.id),item]));
-this.props.history.push("/marketplace");
+this.props.history.push("/posters");
 
 
 
@@ -413,7 +365,7 @@ console.log(newarr)
 // localStorage.setItem('cart',JSON.stringify([item,...JSON.parse(localStorage.getItem(('cart')|| []))]));
 
 localStorage.setItem('cart',JSON.stringify([...newarr.filter((obj) => obj.id !== item.id),item]));
-this.props.history.push("/marketplace");
+this.props.history.push("/posters");
 
 
 
@@ -462,4 +414,4 @@ const styles = {
     }
   };
 
-export default MarketPlace;
+export default PosterPage2;

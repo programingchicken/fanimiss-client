@@ -11,6 +11,7 @@ import EmailForm from './EmailForm'
 const CartDropDown = (props) => {
    const [truth,setTruth]= useState(false)
    const [errors,setErrors]= useState([])
+let cost = 0;
     const {clNav,opNav} = props
     const fullArr = JSON.parse(localStorage.getItem(('cart')))
     console.log(fullArr)
@@ -63,6 +64,7 @@ const CartDropDown = (props) => {
     }
 
     for (const obj of fullArr) {
+      cost += parseFloat(obj.price.replace('$','') * obj.quantity)
      results.push(
         <span
           className="btn rounded-5 hoverLink newLinkDiv"
@@ -71,14 +73,14 @@ const CartDropDown = (props) => {
           <img
             alt="merchandise"
             src={obj.img}
-            style={{ position:'relative',height: "9.5vw", width: "7.5vw", right: '16.5vw',top: '1vh' }}
+        className="cartI"
           />
-          <h1 className=" nameTitle">{obj.name}</h1>
+          <h1 className=" nameTitle4">{obj.name}</h1>
           <div className="arg2">
-          <span className="price">{obj.price}</span>
-          <span className=" quan">{obj.quantity}</span>
+          <span className="price4">{obj.price}</span>
+          <span className=" quan4">Quntity: {obj.quantity}</span>
           </div>
-          <button className="btn btn-outline-secondary rounded-circle" style={{width: "4.5vw", height: "4.5vw", position: 'relative', left:'6vw',bottom: '8vw',color: "#374e66", borderColor: "#374e66"}} onClick={removeItem}>X</button>
+          <button className="btn btn-outline-secondary rounded-circle rm" onClick={removeItem}>X</button>
         </span>
       )
   }
@@ -92,20 +94,11 @@ const CartDropDown = (props) => {
       <React.Fragment>
         <button
           type="button"
-          class="hoverLink btn btn-light rounded-circle"
-          style={{
-            position: "absolute",
-            textAlign: "center",
-            left: "89vw",
-            bottom: "28.5vw",
-            color: "rgb(192 192 192)",
-            cursor: "pointer",
-            width: "3.5vw",
-            height: "3.5vw",
-          }}
+          class="hoverLink btn btn-light rounded-circle cartNav"
+
           onClick={openNav}
         >
-          <FontAwesomeIcon style={{width: "1.5vw", height: "1.5vw"}} icon={solid("cart-shopping")}>
+          <FontAwesomeIcon style={{width: "1em", height: "1em"}} icon={solid("cart-shopping")}>
             {" "}
             <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
                 1
@@ -116,18 +109,26 @@ const CartDropDown = (props) => {
         <div id="mySideBuy" className="sideBuy">
           
           <div id="scrolls" className="scroll">{results}</div>
-          <div id="buy" className="buy">{truth ? <EmailForm                           
+
+          <div id="buy" className="buy">
+          <div id="scales" className="scales rounded-5 sho barer">
+          <a className="des2">Dont Forget A Poster!!</a>
+          <p className="des">In A perfect world, we all want something free. The Best way I give this to all my customers is by paying for your shipping cost, Hoping to cut some of your prices down. Get Your family Their favorite Anime Gear, Easy Quick And simple!!</p>
+          <div className="thePrice">
+          <span className="fullPrice" style={{position:'relative',left: '-4.3vw'}}>Free Shipping: $0.00</span>
+          <span className="fullPrice" style={{position:'relative',left: '-4.5vw',bottom:'1vh'}}>Full Price: ${cost.toFixed(2)}</span>
+          </div>{truth ? <EmailForm                           
                             errors={errors}
                             elements={() => (
                                 <React.Fragment>
-                                    <div style={{display: 'inline-grid',width: "70%", textAlign: 'center'}}>   
-                                        <input type="text"  name="name" placeholder="Name..." style={styles.emailText} required className='bg-dark text-warning'/>
-                                        <input type="hidden" name="_next" value="http://localhost:3000/buypage" />
-                                        <input type="address"  name="address" placeholder="Street Address..." style={styles.emailBox} className='bg-dark text-warning' required/>
-                                        <input type="house"  name="house" placeholder="apt./Unit..." style={styles.emailBox} className='bg-dark text-warning' required/> 
-                                        <input type="postal"  name="postal" placeholder="Postal/Zip" style={styles.emailBox} className='bg-dark text-warning' required/>
-                                        <input type="email"  name="email" placeholder="Email Adress..." style={styles.emailBox} className='bg-dark text-warning' required/> 
-                                        <input type="phone"  name="phone" placeholder="Phone Number..." style={styles.emailBox} className='bg-dark text-warning' required/> 
+                                    <div className="inDiv">   
+                                        <input type="text"  name="name" placeholder="Name..." style={styles.emailText} required className='bg-dark text-warning in rounded-3'/>
+                                        <input type="hidden" name="_next" value="http://localhost:3002/buypage" />
+                                        <input type="address"  name="address" placeholder="Street Address..." style={styles.emailBox} className='bg-dark text-warning in rounded-3' required/>
+                                        <input type="house"  name="house" placeholder="apt./Unit..." style={styles.emailBox} className='bg-dark text-warning in rounded-3' required/> 
+                                        <input type="postal"  name="postal" placeholder="Postal/Zip" style={styles.emailBox} className='bg-dark text-warning in rounded-3' required/>
+                                        <input type="email"  name="email" placeholder="Email Adress..." style={styles.emailBox} className='bg-dark text-warning in rounded-3' required/> 
+                                        <input type="phone"  name="phone" placeholder="Phone Number..." style={styles.emailBox} className='bg-dark text-warning in rounded-3' required/> 
                                     </div>
                                 </React.Fragment>
                                  )}
@@ -135,15 +136,19 @@ const CartDropDown = (props) => {
                                 errors={errors}
                                 elements={() => (
                                     <React.Fragment>
-                                        <div style={{display: 'inline-grid',width: "70%", textAlign: 'center'}}>   
-                                            <input type="text"  name="name" placeholder="Name..." style={styles.emailText} required className='bg-dark text-warning'/>
-                                            <input type="hidden" name="_next" value="http://localhost:3000/buypage" />
-                                            <input type="email"  name="email" placeholder="Email Adress..." style={styles.emailBox} className='bg-dark text-warning' required/> 
-                                            <input type="phone"  name="phone" placeholder="Phone Number..." style={styles.emailBox} className='bg-dark text-warning' required/> 
+                                        <div className="inDiv">   
+                                        <input type="text"  name="name" placeholder="Name..." style={styles.emailText} required className='bg-dark text-warning in rounded-3'/>
+                                        <input type="hidden" name="_next" value="http://localhost:3002/buypage" />
+                                        <input type="address"  name="address" placeholder="Street Address..." style={styles.emailBox} className='bg-dark text-warning in rounded-3' required/>
+                                        <input type="house"  name="house" placeholder="apt./Unit..." style={styles.emailBox} className='bg-dark text-warning in rounded-3' required/> 
+                                        <input type="postal"  name="postal" placeholder="Postal/Zip" style={styles.emailBox} className='bg-dark text-warning in rounded-3' required/>
+                                        <input type="email"  name="email" placeholder="Email Adress..." style={styles.emailBox} className='bg-dark text-warning in rounded-3' required/> 
+                                        <input type="phone"  name="phone" placeholder="Phone Number..." style={styles.emailBox} className='bg-dark text-warning in rounded-3' required/> 
                                         </div>
                                     </React.Fragment>
                                      )}
                                     />}</div>
+                                    </div>
           <span
             style={{ cursor: "pointer" }}
             className="closebtn"
@@ -151,6 +156,7 @@ const CartDropDown = (props) => {
           >
             &times;
           </span>
+
         </div>
       </React.Fragment>
     </nav>

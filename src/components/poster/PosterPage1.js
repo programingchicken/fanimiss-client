@@ -80,20 +80,20 @@ const itemName = {name, stars,img, price, userId, courseUserId, errors,size, cat
         <div
           className="spacer layer3 d-grid justify-content-center align-items-center grid-wrap"
         >
-
+                        <div style={{position: 'relative', right: '25vw'}}>
+            <SideNav />
+                </div>
           <span
             className="sho rounded-pill"
             style={{
               width: "35vw",
-              backgroundColor: "#001220",
+              backgroundColor: "rgb(55 78 102)",
               position: "relative",
               right: ".8%",
               top: "-45.5%",
             }}
           >
-                        <div style={{position: 'relative', right: '25vw'}}>
-            <SideNav />
-                </div>
+
             <h1 style={styles.title}>FANIMISS</h1>
           </span>
           <CartDropDown clNav={this.clNav} opNav={this.opNav}/>
@@ -163,7 +163,7 @@ handelReviews={this.handelReviews}
   //cancel to route
   back = () => {
 
-    this.props.history.push("/posters/small");
+    this.props.history.push("/posters");
   };
 
 
@@ -204,7 +204,7 @@ handelReviews={this.handelReviews}
   
   
       console.log(JSON.parse(localStorage.getItem('cart')))
-          this.props.history.push("/posters/small");
+          this.props.history.push("/posters");
     } else if (display === 2) {
       const {name,stars,id,img,token, quantity,size} = this.state
 let item = {name: `${newName}`,stars:stars,price: price,id: id2,img,token, quantity, nameArr: [{nameC: newAName, quantityC: 1 } ]}
@@ -283,7 +283,7 @@ console.log(newarr)
 // localStorage.setItem('cart',JSON.stringify([item,...JSON.parse(localStorage.getItem(('cart')|| []))]));
 
 localStorage.setItem('cart',JSON.stringify([...newarr.filter((obj) => obj.id !== item.id),item]));
-this.props.history.push("/posters/small");
+this.props.history.push("/posters");
 
 
 
@@ -365,7 +365,7 @@ console.log(newarr)
 // localStorage.setItem('cart',JSON.stringify([item,...JSON.parse(localStorage.getItem(('cart')|| []))]));
 
 localStorage.setItem('cart',JSON.stringify([...newarr.filter((obj) => obj.id !== item.id),item]));
-this.props.history.push("/posters/small");
+this.props.history.push("/posters");
 
 
 

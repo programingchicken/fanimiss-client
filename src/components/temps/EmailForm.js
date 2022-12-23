@@ -30,9 +30,9 @@ const EmailForm = (props) => {
           <Reviews></Reviews>
         </div> */}
         
-        <div className="pad-top" style={styles.top} >
+        <div className="pad-top addressBar"  >
         {elements()}
-        <button type="submit" onSubmit={handleSubmit}>Check Out</button>
+        <button className="rounded-3 chBut" type="submit" onSubmit={handleSubmit}>Check Out</button>
         </div>
 
         </form>

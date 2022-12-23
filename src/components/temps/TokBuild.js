@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
   for (const obj of arr) {
 
       results.push(
-        <a className="btn rounded-5 hoverLink tokDiv" href={`/posters/${obj.po}`} style={{backgroundColor: "rgb(255 255 255)"}}>
+        <a className="btn rounded-5 hoverLink tokDiv" href={`/posters/${obj.id}`} style={{backgroundColor: "rgb(255 255 255)"}}>
             <img
             className=""
             alt="merchandise"

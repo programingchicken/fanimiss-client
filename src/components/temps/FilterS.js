@@ -43,6 +43,18 @@ for (const elm of e) {
 console.log(e)
     }
 
+
+
+function switcher(e){
+    const event = e.target
+    if (event.textContent === '$Low|$High') {
+event.textContent = '$High|$Low'
+document.querySelector(".scroll")
+    } else if (event.textContent === '$High|$Low') {
+        event.textContent = '$Low|$High'
+        document.querySelector(".scroll")
+    }
+}
     function filterSearch(event) {
         const view = document.getElementsByClassName("linkDiv")
         const val = document.getElementById("filt").value
@@ -89,7 +101,10 @@ filter()
         }
     }
 }
+
+
 }
+
     return (
         <div
         className="sho rounded-pill d-grid justify-content-center align-items-center grid-wrap"
@@ -109,14 +124,14 @@ filter()
             bottom: 3,
           }}
         >
-
-          <input className="sho rounded-pill" id='searchBar' onChange={filterSearch} style={{color: '#f2ebeb',backgroundColor:'#797d99',border:'none', width: '30vw', position: 'relative', right: '14vw', top: '-.25vh'}}></input> 
-<select id='filt' onInput={filterSearch} style={{color: '#f2ebeb',backgroundColor:'#797d99',border:'none', width: 'auto', position: 'relative'}} className="sho rounded-pill">
+<button className="sho rounded-pill"  style={{ position: 'relative',left:'34vw', width:'20%'}} onClick={switcher} >$Low|$High</button>
+          <input className="sho rounded-pill"  placeholder='SearchBar...' id='searchBar' onChange={filterSearch} style={{color: '#212529',    background: 'aliceblue',border:'none', width: '30vw', position: 'relative', right: '30%', top: '-.25vh'}}></input> 
+<select id='filt' onInput={filterSearch} style={{color: '#f2ebeb',backgroundColor:'#797d99',border:'none', width: '10vw', position: 'relative',left:'5vw',}} className="sho rounded-pill">
     <option value='0'>All Items</option>
     <option value='One Piece'>One Piece</option>
     <option value="Naruto">Naruto</option>
     <option value="Bleach">Bleach</option>
-    <option value="DemonSlayer">Demon Slayer</option>
+    <option value="Demon Slayer">Demon Slayer</option>
     <option value="My Hero Academia">My Hero Academia</option>
     <option value="Chainsaw Man">Chainsaw Man</option>
     <option value="9">Braclets</option>

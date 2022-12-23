@@ -36,7 +36,7 @@ export const SideNav = () => {
         <nav style={styles.but}>
             {/* {authUser ? ( */}
               <React.Fragment>
-                <button className='hoverLink btn btn-light rounded-circle' style={{textAlign: 'center',position: 'relative',right: '60%',bottom: "-4vw",color: 'rgb(192 192 192)',border:'1px solid rgb(192 192 192)',cursor: 'pointer', width: "3vw", height: "3vw"}} onClick={openNav}><FontAwesomeIcon style={{width: "1.5vw", height: "1.5vw"}}  icon={solid('navicon')} /></button>
+                <button className='hoverLink btn btn-light rounded-circle ham' onClick={openNav}><FontAwesomeIcon style={{width: "1em", height: "1em"}}  icon={solid('navicon')} /></button>
                 <div id="mySidenav" className="sidenav">
                   <span style={{cursor: 'pointer'}} className="closebtn" onClick={closeNav}>&times;</span>
                   <Link className="nav" onClick={closeNav} to="/">Home</Link>

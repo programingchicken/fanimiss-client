@@ -10,7 +10,7 @@ import { faTruckLoading } from '@fortawesome/free-solid-svg-icons';
 
     //submit
     function run() {
-        fetch("http://localhost:7280/create-checkout-session", {
+        fetch("http://localhost:7399/create-checkout-session", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
